@@ -1,77 +1,146 @@
-�
-� ALFABET Ai Assistant 
-Ask intelligent questions about multiple Alfabet PDF documents using 
-Groq's llama3 model and LangChain-powered retrieval. 
-�
-� Features - ✅ Load and index multiple PDFs automatically - ✅ Split text into semantically meaningful chunks - ✅ Embed documents using HuggingFace embeddings - ✅ Store and reuse a FAISS-based vector index - ✅ Use Groq’s Phi-3 language model for accurate, fast responses - ✅ See source filename and page number with every answer 
-�
-� Folder Structure 
-ALFABET_ALL/ 
-├── ALFABET_All_Docs 
-├── faiss_index/  
-├── .env  
-├── config.py 
-├── main.py 
-├── pdf_loader.py  
-├── text_splitter.py  
-├── vectorstore.py  
-├── rag_chain.py  
-├── requirements.txt  
-├── init.py  
-└── .venv/  
-�
-�
- ️ Installation 
-1. Clone this repo 
-bash 
-git clone https://github.com/yourusername/ALFABET_ALL.git 
-cd ALFABET_ALL 
-2. Create and activate virtual environment 
-3. python -m venv .venv 
-4. .venv\Scripts\activate   # On Windows 
-5. Install dependencies 
-6. pip install -r requirements.txt 
-7. Add your Groq API key to .env 
-8. GROQ_API_KEY=your_api_key_here 
-9. Add PDFs to ALFABET_All_Docs/ folder 
-�
-� How It Works 
-• When you run the app for the first time, it: 
-o Loads and processes all PDFs in ALFABET_All_Docs/ 
-o Splits text into smaller chunks 
-o Embeds the chunks using HuggingFace 
-o Stores them in FAISS (faiss_index/) 
-• On future runs, the app loads the saved index for fast startup. 
-• Questions are passed through a Groq-powered retrieval chain, which returns: 
-o The most relevant chunks from the PDFs 
-o A generated answer 
-o PDF name and page number for traceability 
-�
-� Running the App 
-streamlit run main.py 
-Then open the browser link provided by Streamlit (usually http://localhost:8501). 
-�
-� Example Output 
-Question: 
-What is the role of meta-models in Alfabet? 
-Answer: 
-Meta-models define the database structure and functional configuration for the 
-Alfabet solution... 
-Sources: 
-• Alfabet_Administration_Manual.pdf, page 68 
-• Alfabet_Concepts.pdf, page 219 
-�
-� Requirements 
-• Python 3.8+ 
-• Groq API key 
-• Internet connection (to call Groq's model) 
-�
-� Credits 
-• LangChain 
-• Groq API 
-• HuggingFace Transformers 
-• Developed by 💙 [Waseem Aziz] 
-�
-� License 
-This project is for educational/research use only. Please ensure you comply with 
-licensing terms of the data and APIs used. 
+# 📘 ALFABET AI Assistant
+
+Ask intelligent questions about multiple **Alfabet PDF documents** using **Groq's LLaMA 3 model** and **LangChain-powered retrieval**.
+
+---
+
+## ✨ Features
+
+- ✅ Load and index multiple PDFs automatically
+- ✅ Split text into semantically meaningful chunks
+- ✅ Embed documents using HuggingFace embeddings
+- ✅ Store and reuse a FAISS-based vector index
+- ✅ Use **Groq’s LLaMA 3 language model** for accurate, fast responses
+- ✅ Display source filename and page number with every answer
+
+
+## 📂 Folder Structure
+
+```
+
+ALFABET\_Ai\_Assistant/
+├── ALFABET\_All\_Docs/         # Folder for all input PDFs
+├── faiss\_index/              # Vector index storage
+├── .env                      # Groq API key file
+├── config.py
+├── main.py                   # Streamlit app entry
+├── pdf\_loader.py
+├── text\_splitter.py
+├── vectorstore.py
+├── rag\_chain.py
+├── requirements.txt
+├── **init**.py
+└── .venv/                    # Virtual environment (optional)
+
+````
+
+---
+
+## ⚙️ Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/waseem-aziz/AlFABET_Ai_Assistant.git
+cd AlFABET_Ai_Assistant
+````
+
+### 2. Create and activate virtual environment (Windows)
+
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+### 3. Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Add your Groq API key
+
+Create a `.env` file and add:
+
+```
+GROQ_API_KEY=your_api_key_here
+```
+
+### 5. Add your PDFs
+
+Place all your Alfabet documentation PDFs inside the `ALFABET_All_Docs/` folder.
+
+---
+
+## 🚀 Running the App
+
+```bash
+streamlit run main.py
+```
+
+Then open the browser link provided by Streamlit (usually `http://localhost:8501`).
+
+---
+
+## 🔍 How It Works
+
+1. Loads all PDFs from `ALFABET_All_Docs/`
+2. Splits text into meaningful chunks
+3. Embeds the chunks using HuggingFace models
+4. Stores vectors using FAISS (`faiss_index/`)
+5. On next runs, loads prebuilt index for fast access
+6. Uses Groq + LangChain to answer questions with:
+
+   * Relevant answer
+   * Source filename
+   * Page number
+
+---
+
+## 💡 Example
+
+**Question:**
+
+> What is the role of meta-models in Alfabet?
+
+**Answer:**
+
+> Meta-models define the database structure and functional configuration for the Alfabet solution...
+
+**Sources:**
+
+* `Alfabet_Administration_Manual.pdf`, page 68
+* `Alfabet_Concepts.pdf`, page 219
+
+---
+
+## 📌 Requirements
+
+* Python 3.8+
+* Groq API key
+* Internet connection
+
+---
+
+## 🙏 Credits
+
+* [LangChain](https://www.langchain.com/)
+* [Groq API](https://console.groq.com/)
+* [HuggingFace Transformers](https://huggingface.co/)
+* Developed with 💙 by [Waseem Aziz](https://github.com/waseem-aziz)
+
+---
+
+## 📄 License
+
+This project is for **educational and research use only**. Please ensure compliance with the licensing terms of any third-party data or APIs used.
+
+```
+
+---
+
+### ✅ Use this file:
+Save this as `README.md` in the root of your repo.
+
+Agar chaho to main file bhi bana ke de sakta hoon. Let me know 👍
+```

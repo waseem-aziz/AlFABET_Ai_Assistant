@@ -8,4 +8,7 @@ sentence-transformers==2.2.2
 groq
 langchain-huggingface
 PyPDF2
-faiss-cpu==1.7.4
+faiss-cpu==1.7.4.post2
+
+
+

@@ -130,17 +130,3 @@ Then open the browser link provided by Streamlit (usually `http://localhost:8501
 * Developed with 💙 by [Waseem Aziz](https://github.com/waseem-aziz)
 
 ---
-
-## 📄 License
-
-This project is for **educational and research use only**. Please ensure compliance with the licensing terms of any third-party data or APIs used.
-
-```
-
----
-
-### ✅ Use this file:
-Save this as `README.md` in the root of your repo.
-
-Agar chaho to main file bhi bana ke de sakta hoon. Let me know 👍
-```

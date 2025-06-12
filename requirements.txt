@@ -4,9 +4,8 @@ langchain-community
 langchain-groq
 python-dotenv
 PyMuPDF
-sentence-transformers
+sentence-transformers==2.2.2
 groq
 langchain-huggingface
 PyPDF2
 faiss-cpu==1.7.4
-
